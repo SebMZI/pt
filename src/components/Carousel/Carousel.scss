@@ -1,0 +1,147 @@
+.carousel-image {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    position: relative;
+    opacity: 1;
+    .carouselImageCurrent {
+        position: absolute;
+        height: 75%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+        padding: 25px;
+    }
+    .overlay {
+        position: absolute;
+        height: 75%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+        padding: 25px;
+        background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 95%);
+        transition: opacity 1s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .tickets {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        img {
+            position: absolute;
+            height: 70px;
+            width: 30%;
+            min-width: 125px;
+            max-width: 150px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            transition: all 0.3s ease-in-out;
+            opacity: 0.6;
+        }
+        .ticketUp {
+            top: 25px;
+            &:hover {
+                top: 15px;
+                opacity: 1;
+            }
+        }
+        .ticketDown {
+            bottom: 25px;
+            &:hover {
+                bottom: 15px;
+                opacity: 1;
+            }
+        }
+    }
+    .containerLinkButton {
+        display: flex;
+        column-gap: 30px;
+        position: absolute;
+        bottom: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        .linkButton {
+            opacity: 0;
+            transition: opacity 1s;
+            img {
+                height: 110px;
+                width: 130px;
+            }
+        }
+    }
+    &:hover .linkButton {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carousel-image {
+        .carouselImageCurrent, .overlay {
+            height: 60%;
+        }
+        .tickets {
+            img {
+                height: 60px;
+            }
+            .ticketUp {
+                top: 55px;
+                &:hover {
+                    top: 45px;
+                }
+            }
+            .ticketDown {
+                bottom: 55px;
+                &:hover {
+                    bottom: 45px;
+                }
+            }
+        }
+        .containerLinkButton {
+            bottom: 175px;
+            .linkButton {
+                img {
+                    height: 85px;
+                    width: 85px;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 750px) {
+    .carousel-image {
+        
+        .carouselImageCurrent, .overlay {
+            height: 300px;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50px;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-image {
+        height: 300px;
+                width: 100%;
+        .tickets {
+            display: none;
+        }
+        .containerLinkButton {
+            bottom: 30px;
+            .linkButton {
+                img {
+                    height: 80px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

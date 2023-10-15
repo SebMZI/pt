@@ -1,0 +1,25 @@
+.custom-cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(./src/assets/img/icons/cursor.webp);
+    background-size: 100% 100%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .custom-cursor{
+        display: none;
+    }
+}

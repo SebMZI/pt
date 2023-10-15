@@ -1,0 +1,27 @@
+.mainContact {
+    height: calc(100vh - 199px);
+    position: relative;
+    width: 100%;
+    p {
+        position: absolute;
+        color: white;
+        left: 30px;
+        bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .mainContact {
+        height: calc(100vh - 171px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainContact {
+        height: 100%;
+        p {
+            font-size: 14px;
+            bottom: 5px;
+        }
+    }
+}

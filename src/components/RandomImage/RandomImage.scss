@@ -1,0 +1,26 @@
+.randomImageContainer {
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+.randomImageContainer.show {
+    opacity: 0.6 !important;
+}
+.randomImage {
+    height: calc(100vh - 199px);
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 750px) {
+    .randomImage {
+        height: calc(100vh - 171px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .randomImageContainer {
+        height: 350px;
+    }
+    .randomImage {
+        height: 100%;
+    }
+}

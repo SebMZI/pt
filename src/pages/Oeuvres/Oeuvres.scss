@@ -1,0 +1,46 @@
+.mainOeuvres {
+    height: calc(100vh - 199px);
+    display: flex;
+    column-gap: 50px;
+    padding: 0 80px 0 50px;
+}
+
+.showCloseDescription {
+    position: absolute;
+    cursor: pointer;
+    bottom: 14%;
+    right: 30px;
+    height: 110px;
+    width: 130px;
+}
+
+@media screen and (max-width: 750px) {
+    .mainOeuvres {
+        height: calc(100vh - 171px);
+        padding: 0 0px 0 50px;
+    }
+    .showCloseDescription {
+        height: 85px;
+        width: 85px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mainOeuvres {
+        flex-direction: column-reverse;
+        padding: 0 25px;
+        height: 450px;
+        position: relative;
+    }
+    .showCloseDescription {
+        top: 220px;
+        right: 15px;
+        height: 70px;
+        width: 70px;
+    }
+    .showCloseDescription.sticky {
+        position: fixed;
+        top: 580px;
+        z-index: 1;
+    }
+}

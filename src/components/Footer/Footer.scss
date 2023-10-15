@@ -1,0 +1,52 @@
+footer {
+    font-family: 'Great Vibes', cursive;
+    border-top: 1px solid #b4b49e;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    p {
+        position: relative;
+        left: 5%;
+        font-size: 34px;
+        color: #b4b49e;
+        text-align: center;
+    }
+    div {
+        position: absolute;
+        display: flex;
+        column-gap: 15px;
+        top: 19px;
+        right: 40px;
+        img {
+            height: 42.5px;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    footer {
+        p {
+            font-size: 27px;
+        }
+        div {
+            right: 25px;
+            img {
+                height: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        p {
+            font-size: 16px;
+        }
+        div {
+            top: 15px;
+            right: 10px;
+            column-gap: 10px;
+        }
+    }
+}

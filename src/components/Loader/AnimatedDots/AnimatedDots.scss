@@ -1,0 +1,11 @@
+.dot-container{
+    height: 95%;
+    width: 95%;
+    .dot{
+        width:3px;
+        height:2px;
+        background-color:white;
+        position:absolute;
+        opacity:0.3;
+    }
+}

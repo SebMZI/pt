@@ -1,0 +1,191 @@
+nav {
+    font-family: 'Libre Caslon Display', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #b4b49e;
+    & img {
+        height: 70px;
+        filter: invert(60%);
+    }
+    & h1 {
+        font-size: 50px;
+        color: #b4b49e;
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        column-gap: 40px;
+        font-size: 30px;
+        .linkWelcome {
+            font-weight: 400;
+            color: #b4b49e;
+            text-decoration:none;
+            position: relative;
+            &::after {
+                content: "Accueil";
+                position: absolute;
+                color: white;
+                top: 0;
+                left: 0;
+                width: 0%;
+                overflow: hidden;
+                transition: all 0.6s;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+        .linkWorks {
+            font-weight: 400;
+            color: #b4b49e;
+            text-decoration:none;
+            position: relative;
+            &::after {
+                content: "Œuvres";
+                position: absolute;
+                color: white;
+                top: 0;
+                left: 0;
+                width: 0%;
+                overflow: hidden;
+                transition: all 0.6s;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+        .linkContact {
+            font-weight: 400;
+            color: #b4b49e;
+            text-decoration:none;
+            position: relative;
+            &::after {
+                content: "Contact";
+                position: absolute;
+                color: white;
+                top: 0;
+                left: 0;
+                width: 0%;
+                overflow: hidden;
+                transition: all 0.6s;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+        .active {
+            border-bottom: 1px solid white;
+        }
+    }
+}
+
+.menu-button {
+    visibility: hidden;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    z-index: 5;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #b4b49e;
+    margin: 4px 0;
+    position: relative;
+        z-index: 5;
+
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    column-gap: 40px;
+    font-size: 30px;
+    .linkWelcome,
+    .linkWorks,
+    .linkContact {
+        font-weight: 400;
+        color: #b4b49e;
+        text-decoration: none;
+        position: relative;
+    }
+}
+
+.nav-list.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 150px;
+    li {
+        display: flex;
+        align-items: center;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    nav {
+        font-family: 'Libre Caslon Display', serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border-bottom: 1px solid #b4b49e;
+        & img {
+            height: 50px;
+        }
+        & h1 {
+            font-size: 40px;
+        }
+        .nav-list {
+            font-size: 25px;
+            column-gap: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        justify-content: flex-start;
+        column-gap: 20%;
+        img {
+            display: none;
+        }
+        .nav-list {
+            display: none;
+            .linkWelcome::after,
+            .linkWorks::after,
+            .linkContact::after {
+                color: black;
+            }
+            &.open {
+                background-color: white;
+            }
+            a {
+                color: #b4b49e;
+                text-decoration: none;
+                transition: color 0.4s ease-in-out;
+                &:hover {
+                    color: black;
+                }
+            }
+
+        }
+        .nav-list-desktop {
+            display: none;
+        }
+    }
+    .menu-button {
+        visibility: visible;
+    }
+}

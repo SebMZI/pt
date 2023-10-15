@@ -1,0 +1,183 @@
+.formContact {
+    #nom {
+        position: absolute;
+        top: calc(15% + 165px);
+        left: calc(7% + 400px);
+        height: 40px;
+        width: 250px;
+        background-color: transparent;
+        letter-spacing: 1px;
+        font-family: "Libre Caslon Display", serif;
+        font-size: 26px;
+        text-indent: 8px;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: rgb(96, 63, 37);
+        &::placeholder {
+            color: rgb(96, 63, 37);
+        }
+    }
+    #email {
+        position: absolute;
+        top: calc(15% + 240px);
+        left: calc(7% + 400px);
+        height: 40px;
+        width: 250px;
+        background-color: transparent;
+        letter-spacing: 1px;
+        font-family: "Libre Caslon Display", serif;
+        font-size: 26px;
+        text-indent: 8px;
+        border-width: 1px;
+        border-style: solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: rgb(96, 63, 37);
+        &::placeholder {
+            color: rgb(96, 63, 37);
+        }
+    }
+    #message {
+        position: absolute;
+        top: calc(15% + 120px);
+        left: calc(7% + 45px);
+        width: 250px;
+        height: 220px;
+        background-color: transparent;
+        letter-spacing: 1px;
+        font-family: "Libre Caslon Display", serif;
+        font-size: 26px;
+        text-indent: 8px;
+        border-top: none;
+        border-right: none;
+        border-color: rgb(96, 63, 37);
+        &::placeholder {
+            color: rgb(96, 63, 37);
+        }
+    }
+    button {
+        position: absolute;
+        top: calc(15% + 32px);
+        left: calc(7% + 570px);
+        padding: 33px 4px;
+        border-radius: 50%;
+        background-color: transparent;
+        font-weight: 900;
+        font-size: 21px;
+        border: 3px solid black;
+        animation: flashSubmit 3s infinite;
+    }
+    .animate-button {
+        border-color: rgb(107, 3, 3);
+        animation: pulse 0.5s ease forwards;
+    }
+}
+
+@keyframes flashSubmit {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .formContact{
+        display: flex;
+        height: 0;
+        #nom {
+            top: 100px;
+            left: calc(50% - 115px);
+            height: 40px;
+            width: 150px;
+            font-size: 21px;
+            transform: translateX(-50%);
+        }
+        #email {
+            top: 150px;
+            left: calc(50% - 100px);
+            height: 40px;
+            width: 180px;
+            font-size: 21px;
+            transform: translateX(-50%);
+        }
+        #message {
+            top: 255px;
+            left: calc(50% - -45px);
+            width: 200px;
+            height: 220px;
+            font-size: 21px;
+            transform: translateX(-50%);
+        }
+        button {
+            top: 530px;
+            left: calc(50% + 40px);
+            padding: 5px 10px;
+            border-radius: 13%;
+            font-size: 21px;
+            border: 2px solid rgb(141, 112, 94);
+            color: rgb(96, 63, 37);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .formContact{
+        #nom {
+            top: 55px;
+            left: calc(50% - 50px);
+            height: 40px;
+            width: 90px;
+            font-size: 18px;
+            transform: translateX(-50%);
+            text-indent: 4px;
+            }
+        #email {
+            top: 100px;
+            left: calc(50% - 17px);
+            height: 40px;
+            width: 155px;
+            font-size: 18px;
+            transform: translateX(-50%);
+            text-indent: 4px;
+        }
+        #message {
+            top: 150px;
+            left: calc(50% - 9px);
+            width: 173px;
+            height: 142px;
+            font-size: 18px;
+            transform: translateX(-50%);
+            text-indent: 4px;
+        }
+        button {
+            top: 300px;
+            left: calc(50% + 15px);
+            padding: 0 5px;
+            border-radius: 35%;
+            font-size: 16px;
+            border: 2px solid rgb(96, 63, 37);
+            background-color: rgb(218, 204, 139);
+        }
+    }
+}

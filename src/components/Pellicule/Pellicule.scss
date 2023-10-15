@@ -1,0 +1,63 @@
+.pellicule {
+    width: 25%;
+    overflow-y: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectItem {
+    width: 100%;
+    position: relative;
+}
+
+.projectImage {
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.testpelli {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+    &:hover {
+        border: 1px solid grey;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pellicule {
+            width: 100%;
+            height: 150px;
+            position: relative;
+                            overflow-x: hidden;
+
+        .carousel-container {
+            position: absolute;
+            top: 0;
+            flex-direction: row;
+            .projectItem {
+                height: 120px;
+                width: 180px;
+                overflow: hidden;
+                .projectImage {
+                    height: 120px;
+                }
+                .testpelli {
+                    transform: rotate(90deg);
+                    height: 180px;
+                    width: 120px;
+                    top: -30px;
+                    left: 30px;
+                }
+            }
+        }
+    }
+}
