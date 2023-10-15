@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom"
 import { useState } from "react"
 import Image from "../../components/Image/Image"
-import Logo from "../../assets/img/Logo.webp"
+import Logo from "/assets/img/Logo.webp"
 
 export default function Header() {
     const location = useLocation()

@@ -1,7 +1,7 @@
 import Image from "../Image/Image"
-import linkedin from "../../assets/img/icons/linkedin.webp"
-import github from "../../assets/img/icons/github.webp"
-import discord from "../../assets/img/icons/discord.webp"
+import linkedin from "/assets/img/icons/linkedin.webp"
+import github from "/assets/img/icons/github.webp"
+import discord from "/assets/img/icons/discord.webp"
 
 export default function Footer() {
     return (

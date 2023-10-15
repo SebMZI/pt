@@ -2,9 +2,9 @@ import Image from "../../components/Image/Image"
 import RandomImage from "../../components/RandomImage/RandomImage"
 import imagesBackgroundContact from "../../data/imagesBackgroundContact"
 import Form from "../../components/Form/Form"
-import carte from "../../assets/img/contact/carte.webp"
-import encrier from "../../assets/img/contact/encrier.webp"
-import papier from "../../assets/img/contact/papier.webp"
+import carte from "/assets/img/contact/carte.webp"
+import encrier from "/assets/img/contact/encrier.webp"
+import papier from "/assets/img/contact/papier.webp"
 
 export default function Contact() {
     return (

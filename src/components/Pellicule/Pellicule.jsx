@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "../Image/Image"
-import testpelli from "../../assets/img/testpelli.webp"
+import testpelli from "/assets/img/testpelli.webp"
 import Cursor from "../Cursor/Cursor"
 import WindowWidthDetector from "../../components/WindowWidthDetector/WindowWidthDetector"
 
